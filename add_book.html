@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script scr="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    
+    
+    
+    
+   
+<style>
+   .container {
+               padding:16px;
+           }
+
+
+           input[type=text]
+           {
+               width:100%;
+               padding:15px;
+               margin:5px 0 22px 0;
+               display:inline-block;
+               border:none;
+               background:#f1f1f1;
+               background-color:yellow;
+           }
+           
+           input[type=number]
+           {
+               width:100%;
+               padding:15px;
+               margin:5px 0 22px 0;
+               display:inline-block;
+               border:none;
+               background:#f1f1f1;
+               background-color:yellow;
+           }
+           input[type=date]
+           {
+               width:100%;
+               padding:15px;
+               margin:5px 0 22px 0;
+               display:inline-block;
+               border:none;
+               background:#f1f1f1;
+               background-color:yellow;
+           }
+           select
+           {
+               width:100%;
+               padding:15px;
+               margin:5px 0 22px 0;
+               display:inline-block;
+               border:none;
+               background:#f1f1f1;
+               background-color:yellow;
+           }
+           
+           
+           
+           a {
+               color:dodgerblue;
+           }
+
+
+           
+
+</style>
+<script>
+    function validateForm() {
+        var id=document.myform.id.value;
+        var title=document.myform.title.value;
+
+        var author=document.myform.author.value;
+        var price=document.myform.price.value;
+        var genre=document.myform.genre.value;
+        var date=document.myform.date.value;
+        if(id==""||title==""||author==""||price==""||genre==""||date=="")
+        {
+            alert("field should not be empty");
+        }
+        else{
+            alert("book added successfully");
+        }
+
+    }
+</script>
+</head>
+<body>
+    <div class="container">
+        <h2>Add book Form</h2>
+        <form name="myform">
+            <div class="form-group">
+                <label for="id">Enter id:</label>
+                <input type="number" class="form-control" id="id" placeholder="Enter id" name="id"></label>
+            </div>
+            <div class="form-group">
+                <label for="title">Enter title:</label>
+                <input type="text" class="form-control" id="title" placeholder="Enter title" name="title"></label>
+            </div>
+            <div class="form-group">
+                <label for="author">Enter author:</label>
+                <input type="text" class="form-control" id="author" placeholder="Enter author" name="author"></label>
+            </div>
+            <div class="form-group">
+                <label for="price">Enter price:</label>
+                <input type="number" class="form-control" id="price" placeholder="Enter price" name="price"></label>
+            </div>
+            <div class="form-group">
+            <label for="genre"> Genre </label>
+            <select name="genre" id="genre">
+                <option>Mystery</option>
+                <option>thriller</option>
+                <option>comic</option>
+            </select><br>
+            </div>
+            <div class="form-group">
+            <label for="start""> date </label>
+            <input type="date" class="form-control" id="date"  name="trip-start" value="2018-07-22"
+            min="2018-01-01" max="2020-10-24"><br>
+            </div>
+            <button onclick="validateForm()">submit</button>
+        </form>
+    </div>
+    </body>
+</html> 
